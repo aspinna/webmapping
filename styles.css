@@ -1,0 +1,129 @@
+html, body {
+    height: 100%;
+    margin-top: 25px;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-bottom: 5%;
+    font-family: system-ui;
+}
+
+#box-container {
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 10px; /*rounded corner*/
+    background-color: rgba(30, 85, 42, 0.2);
+    margin-bottom: 10px;
+}
+
+#box-container_2 {
+    position : relative;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 10px; /*rounded corner*/
+    background-color: rgba(30, 85, 42, 0.2);
+    margin-bottom: 80px;
+}
+
+#titre {
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 40px;
+    font-family: Impact, fantasy;
+    font-style: italic;
+    color : rgb(255, 255, 255)
+}
+
+#intro p {
+    text-align: justify;
+    margin-bottom: 10px;
+    text-indent: 2%;
+}
+
+#attrib {
+    text-align: center;
+    margin-top: 6%;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.image-container {
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    text-align: center; /* Centre l'image à l'intérieur du conteneur */
+    overflow: hidden;
+  }
+
+.image-container img {
+    max-width: 60%;
+    height: auto; /* Maintient le rapport hauteur/largeur de l'image */
+    display: block; /* Élimine l'espace réservé sous l'image dû à son affichage en ligne par défaut */
+    margin: 0 auto; /* Centre l'image horizontalement à l'intérieur du conteneur */
+  }
+
+.image-container figcaption {
+  font-size: 12px;
+  font-style: italic;
+  }
+
+.side-by-side {
+    float: left;
+    margin-right: 10px; /* Adjust the margin between the images */
+}
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+.lb-overlay {
+    background: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+}
+
+#map-container {
+    display: flex;
+    height: 100vh;
+    margin-bottom: 0 !important;
+}
+
+.mapping {
+    flex: 1;
+    height: 90%;
+    border: 2px solid #000; /* Add a border with 2px thickness and black color */
+    margin-right: 2mm; /* Add a margin to create spacing between maps */
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+    html, body {
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+
+    #box-container {
+        padding: 5px; /* Adjust padding for smaller screens */
+    }
+
+    #titre {
+        margin-bottom: 30px; /* Adjust spacing below the intro div for smaller screens */
+        font-size: 35px; /* Adjust the text size for smaller screens */
+    } 
+
+    #intro {
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="box-container">
+        <div id="titre">UE 902_01 - Webmapping</div>
+        <div id="intro">
+            Dans le cadre de l'UE de Télédection, nous avons réalisé un ensemble de cartes qui vont vous être ici présentées
+            <p>Notre cas d’étude se focalise sur la commune de Toulouse et ses alentours. L’objectif est de déterminer 
+            si l’inventaire forestier de la base de données IGN (BDForêt_V2.0) peut être utilisée comme source d’échantillons de 
+            référence pour réaliser une classification supervisée de séries temporelles d’images Sentinel 2. En effet, la BDForêt 
+            constitue le référentiel géographique de composition et de distribution spatiale des essences forestières sur le 
+            territoire national. Toutefois, c’est une base de données peu mise à jour (la dernière remonte à 2016) et ne permet pas 
+            de cartographier les essences forestières à une échelle intra-peuplement.</p>
+            <p>Pour répondre à cet objectif, plusieurs classifications supervisées ont été réalisées pour différents niveaux de nomenclature 
+            d’essences forestières (Figure 1.), dont sera évaluée la qualité des cartes produites à travers une validation stratifiée qui prend en 
+            compte l'appartenance des pixels à un polygone et qui sera répétée 30 fois avec 5 <i>folds</i>.</p>
+        </div>
+        <div class="image-container">
+            <figure>
+                <a href="images/projet_nomenclature.png" data-lightbox="image-set">
+                    <img src="images/projet_nomenclature.png" alt="nomenclature">
+                    <figcaption>Figure 1 : Correspondance entre les classes de la BD Forêt et les nomenclatures des cartes à obtenir.</figcaption>
+                </a>
+            </figure>
+        </div>
+    </div>
+
+    <h3 style="text-align: center; margin-top: 3%">Triptyque cartographique de classification selon trois niveaux de nomenclature de 
+        la BDForêt</h3>
+    <div id="map-container">
+        <div id="map1" class="mapping"></div>
+        <div id="map2" class="mapping"></div>
+        <div id="map3" class="mapping"></div>
+    </div>
+
+    <div id="box-container_2">
+        <div class="image-container">
+            <div class="row">
+                <div class="column">
+                    <a href="images/matrice_confusion_lvl1.png" data-lightbox="image-set">
+                        <img src="images/matrice_confusion_lvl1.png" alt="model_lvl1" style="width:100%">
+                        <figcaption>Figure 2 : Matrice de confusion de notre classification pour la nomenclature BDForêt de niveau 1</figcaption>
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="images/matrice_confusion_lvl2.png" data-lightbox="image-set ">
+                        <img src="images/matrice_confusion_lvl2.png" alt="model_lvl2" style="width:100%">
+                        <figcaption>Figure 3 : Matrice de confusion de notre classification pour la nomenclature BDForêt de niveau 2</figcaption>
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="images/matrice_confusion_lvl3.png" data-lightbox="image-set">
+                        <img src="images/matrice_confusion_lvl3.png" alt="model_lvl3" style="width:100%">
+                        <figcaption>Figure 4 : Matrice de confusion de notre classification pour la nomenclature BDForêt de niveau 3</figcaption>
+                    </a>
+                </div>
+            </div> 
+        </div> 
+        <div id="intro">
+            <p>La classification des essences forestières de la nomenclature de niveau 1 (Figure 15.) tout comme celle de la nomenclature de 
+            niveau 2 (Figure 16.) montre la dominance des feuillus sur les conifères.</p>
+            <p>Tout comme le niveau 1 et 2, la carte de classification des essences forestières de la nomenclature de niveau 3 (Figure 17.) 
+            fait ressortir la dominance de la classe « Feuillus » et plus particulièrement la sous-classe « Chêne pur ». De plus, cette 
+            nomenclature étant plus détaillée (10 classes), permet de constater une présence significative des « Douglas » pur appartenant 
+            à la classe des Conifères au Sud de la zone d’étude.</p>
+            <p>L’efficacité de ces trois modèles suit la performance croissante suivante : un niveau 3 avec une précision globale médiocre 
+            (OA = 0.36), un niveau 2 moyen (OA = 0.74), et un niveau 1 avec une précision globale excellente (OA = 0.94). Ce constat était 
+            attendu puisque le nombre de classes augmente de niveau en niveau et donc le nombre de données disponibles par classes est de plus 
+            en plus petit pour effectuer l’apprentissage ; une multiplicité de classes génère forcément une confusion supérieure lors de la 
+            classification.</p>
+            <p>L’objectif de ce projet était de déterminer si la BDForet_V2.0 pouvait être employée comme source d’échantillons de référence 
+            pour réaliser une classification supervisée de séries temporelles d’images Sentinel 2. La réponse est mitigée en fonction des besoins 
+            de l’utilisateur. Si l’utilisateur cherche à définir seulement les étendus de feuillus, notre classification semble être pertinente 
+            sur le niveau 1. En revanche, si l’utilisateur souhaite explorer des classifications de niveau 2 ou 3, la réponse apportée par nos 
+            modèles est peu satisfaisante. L’entraînement et la validation sur les échantillons complets pourraient peut-être réduire cette 
+            médiocrité.</p>
+            <p>D’autres éléments sont à mettre en perspective de la performance de nos modèles, plusieurs biais interviennent notamment. 
+            Tout d’abord les données de bases étudiées : un inventaire forestier datant de 2016, et des images Sentine 2 à l’année 2021. 
+            Cette disparité temporelle occulte de possibles modifications du couvert végétal qui seront alors mal interprétées par nos modèles. 
+            Aussi, nous avons appliqué nos classifications supervisées sur seulement 20% des échantillons totaux de la BDForet (autrement l'ensemble 
+            aurait pris plus de 3 jours à être généré). Avec les échantillons complets, nos performances devraient être supérieures. Enfin, le choix des classes regroupées par niveau de 
+            nomenclature, bien que logique, détient une part d’arbitraire.</p>
+        </div>
+
+    <div id="attrib">
+        Présentation web réalisée par Anne-Sophie PINNA, dans le cadre du Master SIGMA, promotion 2023-2024
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet-fullscreen/dist/Leaflet.fullscreen.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-fullscreen/dist/leaflet.fullscreen.css" />
+    <script src="map.js"></script>
+</body>
+</html>
