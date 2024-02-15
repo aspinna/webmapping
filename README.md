@@ -10,9 +10,11 @@ Les cartes représentées illustrent la répartition d'essences forestières qui
 
 ### Les couches
 
-Trois couches ont été importées sur GeoServer :
-<li><b>carte_essences_lvl1</b></li>
-<li><b>carte_essences_lvl2</b></li>
-<li><b>carte_essences_lvl3</b></li>
+Trois couches et leur styles respectifs ont été importées sur GeoServer :
+<ul>
+  <li><b>carte_essences_lvl1</b></li> : carte de classification basée sur le niveau 1 de nomenclature de la BDForêt (voir tableau sur mon site)
+  <li><b>carte_essences_lvl2</b></li> : carte de classification basée sur le niveau 2 de nomenclature de la BDForêt (voir tableau sur mon site)
+  <li><b>carte_essences_lvl3</b></li> : carte de classification basée sur le niveau 3 de nomenclature de la BDForêt (voir tableau sur mon site)
+</ul>
 
 
