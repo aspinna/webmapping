@@ -1,5 +1,5 @@
-// Coordonnées initiales pour centrer la carte
-const initialCoords = [43.6007, 1.4329]; // Coordonnées de Toulouse, France
+// Initial coordinates to center the maps
+const initialCoords = [43.6007, 1.4329]; // Toulouse, France coordinates
 
 // Map comparison
 // Create Leaflet maps
