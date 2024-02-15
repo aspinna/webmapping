@@ -19,4 +19,18 @@ Trois couches et leur styles respectifs ont été importées sur GeoServer :
 
 Ces cartes ont été intégrées sous javascript via la librairie **LeafLet** d'après leur URL Goeserver de flux WMS.
 
+## Le code
+### Les dépendances
+
+Les cartes intéractives ont été réalisées exclusivement par l'intermédiaire de la librairie Javascript **LeafLet**. Différents modules ont été importés :
+<ul>
+  <li><a href="https://unpkg.com/leaflet/dist/leaflet.js">leaflet</a> : carte de classification basée sur le niveau 1 de nomenclature de la BDForêt (voir tableau sur mon site)</li>
+  <li><a href="https://unpkg.com/leaflet-fullscreen/dist/Leaflet.fullscreen.js">Leaflet.fullscreen</a> : carte de classification basée sur le niveau 2 de nomenclature de la BDForêt (voir tableau sur mon site)</li>
+</ul>
+
+## Objectif personnel de représentation Webmapping
+
+L'objectif de ce projet était de mettre en comparaison les 3 niveaux de nomenclature obtenus par nos classifications. Pour cela, il m'a paru judicieux de positionner les cartes les unes à côté des autres sous la forme d'un triptyque et de synchroniser les cartes. Cela pour s'assurer que les interactions de l'utilisateur sur l'une des cartes soient automatiquement reflétées sur les autres. Ainsi l'objectif de comparaison est plus aisé.
+
+## Perspectives d'amélioration
 
