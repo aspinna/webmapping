@@ -19,8 +19,7 @@ Trois couches et leur styles respectifs ont été importées sur GeoServer :
 
 Ces cartes ont été intégrées sous javascript via la librairie **LeafLet** d'après leur URL Goeserver de flux WMS.
 
-## Le code
-### Les dépendances
+## Les dépendances du code
 
 Les cartes intéractives ont été réalisées exclusivement par l'intermédiaire de la librairie Javascript **LeafLet**. Différents modules ont été importés :
 <ul>
