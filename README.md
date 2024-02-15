@@ -2,7 +2,7 @@
 
 Le projet web réalisé met en avant un projet précédent en télédétection. Le sujet était de déterminer  si l’inventaire forestier de la base de données IGN (BDForêt_V2.0) pouvait être utilisée comme source d’échantillons de référence pour réaliser une classification supervisée de séries temporelles d’images Sentinel 2. Plusieurs classifications supervisées ont été réalisées pour - entre autres - différents niveaux de nomenclature d’essences forestières (Figure 1.), dont sera évaluée la qualité des cartes produites à travers une validation stratifiée qui prend en compte l'appartenance des pixels à un polygone et qui sera répétée 30 fois avec 5 folds.
 
-## Les cartes interactives web et leurx composantes
+## Les cartes interactives web et leurs composantes
 ### Le fond de carte
 
 Les cartes représentées illustrent la répartition d'essences forestières qui sont cartographiées avec des teintes essentiellement vertes, pour certaine nommenclature avec un certain nombre de classe (par exemple le niveau 3 avec 10 classes) des couleurs aléatoires ont été choisie pour distinguer au mieux les essences. Ainsi, pour essayer de visualiser au mieux cette symbologie, j'ai choisi un fond de carte sobre et sombre  : 
@@ -16,5 +16,7 @@ Trois couches et leur styles respectifs ont été importées sur GeoServer :
   <li><b>carte_essences_lvl2</b> : carte de classification basée sur le niveau 2 de nomenclature de la BDForêt (voir tableau sur mon site)</li>
   <li><b>carte_essences_lvl3</b> : carte de classification basée sur le niveau 3 de nomenclature de la BDForêt (voir tableau sur mon site)</li>
 </ul>
+
+Ces cartes ont été intégrées sous javascript via la librairie **LeafLet** d'après leur URL Goeserver de flux WMS.
 
 
