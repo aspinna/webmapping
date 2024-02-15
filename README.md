@@ -30,7 +30,9 @@ Les cartes intéractives ont été réalisées exclusivement par l'intermédiair
 
 ## Objectif personnel de représentation Webmapping
 
-L'objectif de ce projet était de mettre en comparaison les 3 niveaux de nomenclature obtenus par nos classifications. Pour cela, il m'a paru judicieux de positionner les cartes les unes à côté des autres sous la forme d'un triptyque et de synchroniser les cartes. Cela pour s'assurer que les interactions de l'utilisateur sur l'une des cartes soient automatiquement reflétées sur les autres. Ainsi l'objectif de comparaison est plus aisé.
+L'objectif de ce projet était de **mettre en comparaison** les 3 niveaux de nomenclature obtenus par nos classifications. Pour cela, il m'a paru judicieux de positionner les cartes les unes à côté des autres sous la forme d'un **triptyque** et de **synchroniser** les cartes. Cela pour s'assurer que les interactions de l'utilisateur sur l'une des cartes soient automatiquement reflétées sur les autres. Ainsi l'objectif de comparaison est plus aisé.
 
 ## Perspectives d'amélioration
 
+Le rendu obtenu pourrait connaître plusieurs améliorations, la première étant l'ajout d'un réglage dynamique d'opacité et d'une légende dynamique
+Sur les cartes présentée, la légende et sa mise en forme est figée. Il s'agit en fait simplement de l'image issue de GeoServer à l'enregistrement des couches de style. Il serait pertinent de pouvoir laisser l'opportunité à l'utilisateur de pouvoir masquer au choix les classes de nomenclature. Plus simplement également, il aurait été intéressant d'avoir pu paramètrer la mise en forme de la légende (distance taille des symboles, symbole-texte etc.). Au format WFS cela aurait été probablement plus aisé.
