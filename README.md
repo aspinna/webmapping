@@ -6,6 +6,6 @@ Le projet web réalisé met en avant un projet précédent en télédétection. 
 ### Le fond de carte
 
 Les cartes représentées illustrent la répartition d'essences forestières qui sont cartographiées avec des teintes essentiellement vertes, pour certaine nommenclature avec un certain nombre de classe (par exemple le niveau 3 avec 10 classes) des couleurs aléatoires ont été choisie pour distinguer au mieux les essences. Ainsi, pour essayer de visualiser au mieux cette symbologie, j'ai choisi un fond de carte sobre et sombre  : 
-<ul> <a href="[https://openclassrooms.com](https://www.arcgis.com/home/item.html?id=a284a9b99b3446a3910d4144a50990f6)https://www.arcgis.com/home/item.html?id=a284a9b99b3446a3910d4144a50990f6">World_Dark_Gray_Base</a> de ESRI : Cette couche de carte attire l'attention sur le contenu thématique en fournissant un arrière-plan neutre avec un minimum de couleurs, d'étiquettes et de fonctionnalités. Seules les informations clés sont représentées pour fournir un contexte géographique.</ul>
+<ul> <a href="https://www.arcgis.com/home/item.html?id=a284a9b99b3446a3910d4144a50990f6">World_Dark_Gray_Base</a> de ESRI : Cette couche de carte attire l'attention sur le contenu thématique en fournissant un arrière-plan neutre avec un minimum de couleurs, d'étiquettes et de fonctionnalités. Seules les informations clés sont représentées pour fournir un contexte géographique.</ul>
 
 
