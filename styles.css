@@ -10,7 +10,7 @@ html, body {
 #box-container {
     max-width: 100%;
     padding: 20px;
-    border-radius: 10px; /*rounded corner*/
+    border-radius: 10px; 
     background-color: rgba(30, 85, 42, 0.2);
     margin-bottom: 10px;
 }
@@ -19,7 +19,7 @@ html, body {
     position : relative;
     max-width: 100%;
     padding: 20px;
-    border-radius: 10px; /*rounded corner*/
+    border-radius: 10px; 
     background-color: rgba(30, 85, 42, 0.2);
     margin-bottom: 80px;
 }
@@ -47,16 +47,16 @@ html, body {
 }
 
 .image-container {
-    margin: 0 auto; /* Centre le conteneur horizontalement */
-    text-align: center; /* Centre l'image à l'intérieur du conteneur */
+    margin: 0 auto; 
+    text-align: center; 
     overflow: hidden;
   }
 
 .image-container img {
     max-width: 60%;
-    height: auto; /* Maintient le rapport hauteur/largeur de l'image */
-    display: block; /* Élimine l'espace réservé sous l'image dû à son affichage en ligne par défaut */
-    margin: 0 auto; /* Centre l'image horizontalement à l'intérieur du conteneur */
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
   }
 
 .image-container figcaption {
@@ -66,7 +66,7 @@ html, body {
 
 .side-by-side {
     float: left;
-    margin-right: 10px; /* Adjust the margin between the images */
+    margin-right: 10px; 
 }
 
 body.lightbox-open {
@@ -74,7 +74,7 @@ body.lightbox-open {
 }
 
 .lb-overlay {
-    background: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+    background: rgba(0, 0, 0, 0.8); 
 }
 
 #map-container {
@@ -86,8 +86,8 @@ body.lightbox-open {
 .mapping {
     flex: 1;
     height: 90%;
-    border: 2px solid #000; /* Add a border with 2px thickness and black color */
-    margin-right: 2mm; /* Add a margin to create spacing between maps */
+    border: 2px solid #000; 
+    margin-right: 2mm;
 }
 
 * {
