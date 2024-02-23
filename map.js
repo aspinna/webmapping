@@ -79,7 +79,7 @@ legend_simple_1.onAdd = function (map1) {
     '<img id="leg_map1" src="https://www.geotests.net/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&transparent=true&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=ASPinna:carte_essences_lvl1" alt="">' +
     '</div>' +
     '<style>#leg_map1 {width: 55%; display: block; padding: 5px; border-radius: 5px;}</style>' + // Adjusted the styles
-    '<style>#legend-content1 {font-size: 9.5px; width: 140px; display: block; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px;}</style>'
+    '<style>#legend-content1 {font-size: 9.5px; width: 150px; display: block; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px;}</style>'
   );
 
   return divlegend;
